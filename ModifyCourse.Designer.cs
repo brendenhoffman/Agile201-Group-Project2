@@ -70,14 +70,14 @@
             // 
             // newSeatsTextBox
             // 
-            newSeatsTextBox.Location = new Point(152, 175);
+            newSeatsTextBox.Location = new Point(160, 191);
             newSeatsTextBox.Name = "newSeatsTextBox";
             newSeatsTextBox.Size = new Size(100, 23);
             newSeatsTextBox.TabIndex = 9;
             // 
             // registeredTextBox
             // 
-            registeredTextBox.Location = new Point(162, 134);
+            registeredTextBox.Location = new Point(160, 158);
             registeredTextBox.Name = "registeredTextBox";
             registeredTextBox.ReadOnly = true;
             registeredTextBox.Size = new Size(100, 23);
@@ -85,7 +85,7 @@
             // 
             // seatsTextBox
             // 
-            seatsTextBox.Location = new Point(160, 98);
+            seatsTextBox.Location = new Point(160, 121);
             seatsTextBox.Name = "seatsTextBox";
             seatsTextBox.ReadOnly = true;
             seatsTextBox.Size = new Size(100, 23);
@@ -93,14 +93,15 @@
             // 
             // descriptionTextBox
             // 
-            descriptionTextBox.Location = new Point(158, 63);
+            descriptionTextBox.Location = new Point(160, 64);
+            descriptionTextBox.Multiline = true;
             descriptionTextBox.Name = "descriptionTextBox";
-            descriptionTextBox.Size = new Size(100, 23);
+            descriptionTextBox.Size = new Size(100, 42);
             descriptionTextBox.TabIndex = 6;
             // 
             // courseNameTextBox
             // 
-            courseNameTextBox.Location = new Point(149, 31);
+            courseNameTextBox.Location = new Point(160, 27);
             courseNameTextBox.Name = "courseNameTextBox";
             courseNameTextBox.Size = new Size(100, 23);
             courseNameTextBox.TabIndex = 5;
@@ -108,7 +109,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 175);
+            label6.Location = new Point(39, 194);
             label6.Name = "label6";
             label6.Size = new Size(64, 15);
             label6.TabIndex = 4;
@@ -117,7 +118,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(15, 134);
+            label5.Location = new Point(15, 161);
             label5.Name = "label5";
             label5.Size = new Size(88, 15);
             label5.TabIndex = 3;
@@ -126,7 +127,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(15, 102);
+            label4.Location = new Point(66, 124);
             label4.Name = "label4";
             label4.Size = new Size(37, 15);
             label4.TabIndex = 2;
@@ -135,7 +136,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(14, 67);
+            label3.Location = new Point(33, 67);
             label3.Name = "label3";
             label3.Size = new Size(70, 15);
             label3.TabIndex = 1;
@@ -144,7 +145,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(9, 30);
+            label2.Location = new Point(21, 30);
             label2.Name = "label2";
             label2.Size = new Size(82, 15);
             label2.TabIndex = 0;
@@ -153,7 +154,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(73, 45);
+            label1.Location = new Point(112, 45);
             label1.Name = "label1";
             label1.Size = new Size(61, 15);
             label1.TabIndex = 1;
@@ -161,14 +162,14 @@
             // 
             // courseIDTextBox
             // 
-            courseIDTextBox.Location = new Point(185, 42);
+            courseIDTextBox.Location = new Point(230, 42);
             courseIDTextBox.Name = "courseIDTextBox";
-            courseIDTextBox.Size = new Size(100, 23);
+            courseIDTextBox.Size = new Size(65, 23);
             courseIDTextBox.TabIndex = 2;
             // 
             // findButton
             // 
-            findButton.Location = new Point(315, 47);
+            findButton.Location = new Point(323, 41);
             findButton.Name = "findButton";
             findButton.Size = new Size(75, 23);
             findButton.TabIndex = 3;
@@ -178,7 +179,7 @@
             // 
             // saveButton
             // 
-            saveButton.Location = new Point(98, 366);
+            saveButton.Location = new Point(70, 352);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(75, 40);
             saveButton.TabIndex = 4;
@@ -188,7 +189,7 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(276, 366);
+            closeButton.Location = new Point(171, 352);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(75, 40);
             closeButton.TabIndex = 5;
@@ -198,7 +199,7 @@
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(451, 366);
+            deleteButton.Location = new Point(276, 352);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(75, 40);
             deleteButton.TabIndex = 6;
@@ -209,7 +210,7 @@
             // enabledCheckBox
             // 
             enabledCheckBox.AutoSize = true;
-            enabledCheckBox.Location = new Point(437, 341);
+            enabledCheckBox.Location = new Point(267, 318);
             enabledCheckBox.Name = "enabledCheckBox";
             enabledCheckBox.Size = new Size(104, 19);
             enabledCheckBox.TabIndex = 7;
@@ -220,7 +221,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(435, 422);
             Controls.Add(enabledCheckBox);
             Controls.Add(deleteButton);
             Controls.Add(closeButton);

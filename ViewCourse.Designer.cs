@@ -42,7 +42,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(51, 38);
+            label1.Location = new Point(60, 50);
             label1.Name = "label1";
             label1.Size = new Size(61, 15);
             label1.TabIndex = 0;
@@ -50,14 +50,14 @@
             // 
             // courseIDTextBox
             // 
-            courseIDTextBox.Location = new Point(151, 38);
+            courseIDTextBox.Location = new Point(190, 46);
             courseIDTextBox.Name = "courseIDTextBox";
             courseIDTextBox.Size = new Size(100, 23);
             courseIDTextBox.TabIndex = 1;
             // 
             // findButton
             // 
-            findButton.Location = new Point(322, 42);
+            findButton.Location = new Point(382, 46);
             findButton.Name = "findButton";
             findButton.Size = new Size(75, 23);
             findButton.TabIndex = 2;
@@ -67,6 +67,7 @@
             // courseListBox
             // 
             courseListBox.FormattingEnabled = true;
+            courseListBox.HorizontalScrollbar = true;
             courseListBox.ItemHeight = 15;
             courseListBox.Location = new Point(60, 97);
             courseListBox.Name = "courseListBox";
@@ -75,7 +76,7 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(262, 386);
+            closeButton.Location = new Point(264, 386);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(98, 39);
             closeButton.TabIndex = 4;
@@ -85,7 +86,7 @@
             // 
             // purgeButton
             // 
-            purgeButton.Location = new Point(433, 386);
+            purgeButton.Location = new Point(471, 386);
             purgeButton.Name = "purgeButton";
             purgeButton.Size = new Size(98, 39);
             purgeButton.TabIndex = 5;
@@ -106,7 +107,7 @@
             // enabledCheckBox
             // 
             enabledCheckBox.AutoSize = true;
-            enabledCheckBox.Location = new Point(433, 363);
+            enabledCheckBox.Location = new Point(467, 362);
             enabledCheckBox.Name = "enabledCheckBox";
             enabledCheckBox.Size = new Size(102, 19);
             enabledCheckBox.TabIndex = 7;
@@ -117,7 +118,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(628, 450);
             Controls.Add(enabledCheckBox);
             Controls.Add(printButton);
             Controls.Add(purgeButton);

@@ -49,7 +49,7 @@
             // 
             // findButton
             // 
-            findButton.Location = new Point(287, 40);
+            findButton.Location = new Point(395, 40);
             findButton.Name = "findButton";
             findButton.Size = new Size(75, 23);
             findButton.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // studentIDTextBox
             // 
-            studentIDTextBox.Location = new Point(160, 41);
+            studentIDTextBox.Location = new Point(217, 41);
             studentIDTextBox.Name = "studentIDTextBox";
             studentIDTextBox.Size = new Size(100, 23);
             studentIDTextBox.TabIndex = 2;
@@ -67,15 +67,16 @@
             // courseListBox
             // 
             courseListBox.FormattingEnabled = true;
+            courseListBox.HorizontalScrollbar = true;
             courseListBox.ItemHeight = 15;
             courseListBox.Location = new Point(63, 91);
             courseListBox.Name = "courseListBox";
-            courseListBox.Size = new Size(342, 244);
+            courseListBox.Size = new Size(507, 244);
             courseListBox.TabIndex = 3;
             // 
             // printButton
             // 
-            printButton.Location = new Point(73, 385);
+            printButton.Location = new Point(73, 366);
             printButton.Name = "printButton";
             printButton.Size = new Size(75, 38);
             printButton.TabIndex = 4;
@@ -85,7 +86,7 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(271, 385);
+            closeButton.Location = new Point(274, 366);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(75, 38);
             closeButton.TabIndex = 5;
@@ -95,7 +96,7 @@
             // 
             // removeCourseButton
             // 
-            removeCourseButton.Location = new Point(504, 385);
+            removeCourseButton.Location = new Point(483, 366);
             removeCourseButton.Name = "removeCourseButton";
             removeCourseButton.Size = new Size(75, 38);
             removeCourseButton.TabIndex = 6;
@@ -107,7 +108,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(634, 432);
             Controls.Add(removeCourseButton);
             Controls.Add(closeButton);
             Controls.Add(printButton);

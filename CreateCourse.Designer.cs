@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            courseIDTextBox = new TextBox();
-            courseNameTextBox = new TextBox();
-            descriptionTextBox = new TextBox();
             seatsTextBox = new TextBox();
+            descriptionTextBox = new TextBox();
+            courseNameTextBox = new TextBox();
+            courseIDTextBox = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             saveButton = new Button();
             closeButton = new Button();
             groupBox1.SuspendLayout();
@@ -52,80 +52,81 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(52, 42);
+            groupBox1.Location = new Point(55, 35);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(350, 275);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Course Information";
             // 
-            // label1
+            // seatsTextBox
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(17, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(61, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Course ID:";
+            seatsTextBox.Location = new Point(155, 178);
+            seatsTextBox.Name = "seatsTextBox";
+            seatsTextBox.Size = new Size(100, 23);
+            seatsTextBox.TabIndex = 7;
             // 
-            // label2
+            // descriptionTextBox
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(13, 73);
-            label2.Name = "label2";
-            label2.Size = new Size(82, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Course Name:";
+            descriptionTextBox.Location = new Point(155, 116);
+            descriptionTextBox.Multiline = true;
+            descriptionTextBox.Name = "descriptionTextBox";
+            descriptionTextBox.Size = new Size(100, 40);
+            descriptionTextBox.TabIndex = 6;
             // 
-            // label3
+            // courseNameTextBox
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(14, 100);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Description:";
+            courseNameTextBox.Location = new Point(155, 73);
+            courseNameTextBox.Name = "courseNameTextBox";
+            courseNameTextBox.Size = new Size(100, 23);
+            courseNameTextBox.TabIndex = 5;
+            // 
+            // courseIDTextBox
+            // 
+            courseIDTextBox.Location = new Point(155, 34);
+            courseIDTextBox.Name = "courseIDTextBox";
+            courseIDTextBox.Size = new Size(100, 23);
+            courseIDTextBox.TabIndex = 4;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(18, 134);
+            label4.Location = new Point(58, 181);
             label4.Name = "label4";
             label4.Size = new Size(37, 15);
             label4.TabIndex = 3;
             label4.Text = "Seats:";
             // 
-            // courseIDTextBox
+            // label3
             // 
-            courseIDTextBox.Location = new Point(134, 33);
-            courseIDTextBox.Name = "courseIDTextBox";
-            courseIDTextBox.Size = new Size(100, 23);
-            courseIDTextBox.TabIndex = 4;
+            label3.AutoSize = true;
+            label3.Location = new Point(25, 119);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Description:";
             // 
-            // courseNameTextBox
+            // label2
             // 
-            courseNameTextBox.Location = new Point(142, 75);
-            courseNameTextBox.Name = "courseNameTextBox";
-            courseNameTextBox.Size = new Size(100, 23);
-            courseNameTextBox.TabIndex = 5;
+            label2.AutoSize = true;
+            label2.Location = new Point(13, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(82, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Course Name:";
             // 
-            // descriptionTextBox
+            // label1
             // 
-            descriptionTextBox.Location = new Point(155, 111);
-            descriptionTextBox.Name = "descriptionTextBox";
-            descriptionTextBox.Size = new Size(100, 23);
-            descriptionTextBox.TabIndex = 6;
-            // 
-            // seatsTextBox
-            // 
-            seatsTextBox.Location = new Point(158, 146);
-            seatsTextBox.Name = "seatsTextBox";
-            seatsTextBox.Size = new Size(100, 23);
-            seatsTextBox.TabIndex = 7;
+            label1.AutoSize = true;
+            label1.Location = new Point(34, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Course ID:";
             // 
             // saveButton
             // 
-            saveButton.Location = new Point(55, 365);
+            saveButton.Location = new Point(55, 353);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(75, 23);
             saveButton.TabIndex = 1;
@@ -135,7 +136,7 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(296, 364);
+            closeButton.Location = new Point(330, 353);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(75, 23);
             closeButton.TabIndex = 2;

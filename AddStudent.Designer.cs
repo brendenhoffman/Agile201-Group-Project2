@@ -51,14 +51,14 @@
             // 
             // courseIDTextBox
             // 
-            courseIDTextBox.Location = new Point(166, 47);
+            courseIDTextBox.Location = new Point(164, 46);
             courseIDTextBox.Name = "courseIDTextBox";
             courseIDTextBox.Size = new Size(100, 23);
             courseIDTextBox.TabIndex = 1;
             // 
             // findButton
             // 
-            findButton.Location = new Point(332, 52);
+            findButton.Location = new Point(328, 45);
             findButton.Name = "findButton";
             findButton.Size = new Size(75, 23);
             findButton.TabIndex = 2;
@@ -69,7 +69,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(64, 116);
+            label2.Location = new Point(29, 115);
             label2.Name = "label2";
             label2.Size = new Size(88, 15);
             label2.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // seatsTextBox
             // 
-            seatsTextBox.Location = new Point(173, 115);
+            seatsTextBox.Location = new Point(164, 112);
             seatsTextBox.Name = "seatsTextBox";
             seatsTextBox.ReadOnly = true;
             seatsTextBox.Size = new Size(100, 23);
@@ -85,7 +85,7 @@
             // 
             // studentIDTextBox
             // 
-            studentIDTextBox.Location = new Point(182, 178);
+            studentIDTextBox.Location = new Point(164, 175);
             studentIDTextBox.Name = "studentIDTextBox";
             studentIDTextBox.Size = new Size(100, 23);
             studentIDTextBox.TabIndex = 5;
@@ -93,7 +93,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(65, 183);
+            label3.Location = new Point(52, 178);
             label3.Name = "label3";
             label3.Size = new Size(65, 15);
             label3.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             // addButton
             // 
-            addButton.Location = new Point(340, 180);
+            addButton.Location = new Point(328, 174);
             addButton.Name = "addButton";
             addButton.Size = new Size(75, 23);
             addButton.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(69, 347);
+            closeButton.Location = new Point(57, 315);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(75, 23);
             closeButton.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(450, 367);
             Controls.Add(closeButton);
             Controls.Add(addLabel);
             Controls.Add(addButton);

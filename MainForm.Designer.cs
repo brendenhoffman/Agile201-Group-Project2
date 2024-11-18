@@ -40,11 +40,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(94, 78);
+            label1.Font = new Font("Comic Sans MS", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(105, 77);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(595, 52);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Tiny College Student Registration";
             // 
             // createCourseButton
             // 
@@ -54,7 +55,7 @@
             createCourseButton.TabIndex = 1;
             createCourseButton.Text = "Create &New Course";
             createCourseButton.UseVisualStyleBackColor = true;
-            createCourseButton.Click += this.createCourseButton_Click;
+            createCourseButton.Click += createCourseButton_Click;
             // 
             // modifyCourseButton
             // 
@@ -64,7 +65,7 @@
             modifyCourseButton.TabIndex = 2;
             modifyCourseButton.Text = "&Modify Course";
             modifyCourseButton.UseVisualStyleBackColor = true;
-            modifyCourseButton.Click += this.modifyCourseButton_Click;
+            modifyCourseButton.Click += modifyCourseButton_Click;
             // 
             // viewCourseButton
             // 
@@ -74,7 +75,7 @@
             viewCourseButton.TabIndex = 3;
             viewCourseButton.Text = "&View Course";
             viewCourseButton.UseVisualStyleBackColor = true;
-            viewCourseButton.Click += this.viewCourseButton_Click;
+            viewCourseButton.Click += viewCourseButton_Click;
             // 
             // addStudentButton
             // 
@@ -84,7 +85,7 @@
             addStudentButton.TabIndex = 4;
             addStudentButton.Text = "Add &Student to Course";
             addStudentButton.UseVisualStyleBackColor = true;
-            addStudentButton.Click += this.addStudentButton_Click;
+            addStudentButton.Click += addStudentButton_Click;
             // 
             // viewStudentButton
             // 
@@ -94,7 +95,7 @@
             viewStudentButton.TabIndex = 5;
             viewStudentButton.Text = "Vie&w Student";
             viewStudentButton.UseVisualStyleBackColor = true;
-            viewStudentButton.Click += this.viewStudentButton_Click;
+            viewStudentButton.Click += viewStudentButton_Click;
             // 
             // exitButton
             // 
@@ -104,7 +105,7 @@
             exitButton.TabIndex = 6;
             exitButton.Text = "E&xit";
             exitButton.UseVisualStyleBackColor = true;
-            exitButton.Click += this.exitButton_Click;
+            exitButton.Click += exitButton_Click;
             // 
             // MainForm
             // 
