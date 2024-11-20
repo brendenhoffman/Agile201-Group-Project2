@@ -113,11 +113,19 @@ namespace Agile201_Group_Project2
                     {
                         // Add the student to the course
                         course.AddStudent(studentID);
-                        //MessageBox.Show("Student added successfully.");
-                        addLabel.Text = ($"{studentID} added sucessfully.");
+                        addLabel.Text = $"{studentID} added successfully.";
 
                         // Update available seats
                         seatsTextBox.Text = (course.CourseCapacity - course.RegisteredStudents.Count).ToString();
+
+                        // Save updated course data to the file
+                        using (StreamWriter sw = new StreamWriter("course.txt"))
+                        {
+                            foreach (var c in courses)
+                            {
+                                sw.WriteLine($"{c.CourseID}|{c.CourseName}|{c.CourseDescription}|{c.CourseCapacity}|{string.Join("|", c.RegisteredStudents)}");
+                            }
+                        }
                     }
                     else
                     {
@@ -134,6 +142,7 @@ namespace Agile201_Group_Project2
                 MessageBox.Show("Course not found.");
             }
         }
+
 
         // Event handler for "Save" button click (save course data back to the file)
         private void saveButton_Click(object sender, EventArgs e)

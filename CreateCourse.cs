@@ -54,9 +54,9 @@ namespace Agile201_Group_Project2
                 courseIDTextBox.SelectAll();
             }
             // Check for empty or duplicate CourseName
-            else if (string.IsNullOrEmpty(courseNameTextBox.Text) || (courses.Find(x => x.CourseName == courseNameTextBox.Text) != null))
+            else if (string.IsNullOrEmpty(courseNameTextBox.Text))
             {
-                MessageBox.Show("Course name is already in use or empty.");
+                MessageBox.Show("Course name cannot be empty.");
                 courseNameTextBox.Focus();
                 courseNameTextBox.SelectAll();
             }
