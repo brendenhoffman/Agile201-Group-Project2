@@ -22,7 +22,7 @@ namespace Agile201_Group_Project2
         // Event handler for form load to read courses from the file
         private void AddStudent_Load(object sender, EventArgs e)
         {
-            addLabel.Hide();
+            addLabel.Text = "";
             // Read courses from the file on form load
             if (File.Exists("course.txt"))
             {
@@ -89,7 +89,6 @@ namespace Agile201_Group_Project2
             {
                 // Show the number of seats available in the Seats Available text box
                 seatsTextBox.Text = (course.CourseCapacity - course.RegisteredStudents.Count).ToString();
-                addLabel.Show(); // Show the "Add" button when the course is found
             }
             else
             {
@@ -114,7 +113,8 @@ namespace Agile201_Group_Project2
                     {
                         // Add the student to the course
                         course.AddStudent(studentID);
-                        MessageBox.Show("Student added successfully.");
+                        //MessageBox.Show("Student added successfully.");
+                        addLabel.Text = ($"{studentID} added sucessfully.");
 
                         // Update available seats
                         seatsTextBox.Text = (course.CourseCapacity - course.RegisteredStudents.Count).ToString();
