@@ -22,6 +22,7 @@ namespace Agile201_Group_Project2
         // Event handler for form load to read courses from the file
         private void AddStudent_Load(object sender, EventArgs e)
         {
+            addLabel.Hide();
             // Read courses from the file on form load
             if (File.Exists("course.txt"))
             {
@@ -30,7 +31,7 @@ namespace Agile201_Group_Project2
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        string[] courseData = line.Split(',');
+                        string[] courseData = line.Split('|');
 
                         // Check if courseData has enough fields (at least 4 for ID, Name, Description, Capacity)
                         if (courseData.Length >= 4)

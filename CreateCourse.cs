@@ -24,7 +24,7 @@ namespace Agile201_Group_Project2
             {
                 foreach (var line in File.ReadAllLines("course.txt"))
                 {
-                    var data = line.Split(','); // Adjust this format based on your saved structure
+                    var data = line.Split('|'); // Adjust this format based on your saved structure
                     if (data.Length >= 4)
                     {
                         courses.Add(new Course(data[0], data[1], data[2], int.Parse(data[3])));
@@ -75,7 +75,8 @@ namespace Agile201_Group_Project2
             {
                 // Create a new Course object and save it to the file
                 Course newCourse = new Course(courseIDTextBox.Text, courseNameTextBox.Text, descriptionTextBox.Text, courseCapacity);
-                sw.WriteLine(newCourse); // Save the course info as a string
+                sw.WriteLine($"{newCourse.CourseID}|{newCourse.CourseName}|{newCourse.CourseDescription}|{newCourse.CourseCapacity}");
+                // Save the course info as a string
 
                 // Add the new course to the list
                 courses.Add(newCourse);
