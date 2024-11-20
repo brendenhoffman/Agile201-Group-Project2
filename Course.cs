@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Agile201_Group_Project2
 {
-    internal class Course
+    public class Course
     {
         // Fields
         private string courseID;
@@ -49,7 +49,7 @@ namespace Agile201_Group_Project2
 
         public List<string> RegisteredStudents
         {
-            get { return registeredStudents; }
+            get { return registeredStudents ?? (registeredStudents = new List<string>()); } // Lazy initialization
         }
 
         // Constructors
@@ -59,7 +59,7 @@ namespace Agile201_Group_Project2
             CourseName = courseName;
             CourseDescription = courseDescription;
             CourseCapacity = courseCapacity;
-            registeredStudents = new List<string>();
+            registeredStudents = new List<string>(); // Initialize the list in the constructor
         }
 
         // Methods
