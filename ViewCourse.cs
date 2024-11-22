@@ -12,16 +12,57 @@ namespace Agile201_Group_Project2
 {
     public partial class ViewCourse : Form
     {
-        private List<Course> courses;
-        public ViewCourse(List<Course> courses)
+        private List<Course> courses = new List<Course>();
+        public ViewCourse()
         {
             InitializeComponent();
-            this.courses = courses;
         }
 
         private void ViewCourse_Load(object sender, EventArgs e)
         {
+            if (File.Exists("course.txt"))
+            {
+                using (StreamReader sr = new StreamReader("course.txt"))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] courseData = line.Split('|');
 
+                        if (courseData.Length >= 4)
+                        {
+                            string courseID = courseData[0];
+                            string courseName = courseData[1];
+                            string description = courseData[2];
+                            int capacity;
+
+                            if (int.TryParse(courseData[3], out capacity))
+                            {
+                                Course course = new Course(courseID, courseName, description, capacity);
+
+                                for (int i = 4; i < courseData.Length; i++)
+                                {
+                                    course.RegisteredStudents.Add(courseData[i]);
+                                }
+
+                                courses.Add(course);
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Invalid capacity value for course: {courseID}. Skipping this course.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Invalid course data format. Skipping line: {line}");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Courses file not found.");
+            }
         }
 
         private void purgeButton_Click(object sender, EventArgs e)
@@ -54,14 +95,17 @@ namespace Agile201_Group_Project2
                 return;
             }
             courseListBox.Items.Clear();
-
-            //courseDetailsLabel.Text = course.ToString();
-
+            courseListBox.Items.Add($"ID: {course.CourseID}");
+            courseListBox.Items.Add($"Name: {course.CourseName}");
+            courseListBox.Items.Add($"Description: {course.CourseDescription}");
+            int registeredCount = course.RegisteredStudents.Count;
+            courseListBox.Items.Add($"Capacity: {registeredCount}/{course.CourseCapacity}");
+            courseListBox.Items.Add("");
+            courseListBox.Items.Add("Registered Students:");
             foreach (var student in course.RegisteredStudents)
             {
                 courseListBox.Items.Add(student);
             }
-
 
         }
     }
