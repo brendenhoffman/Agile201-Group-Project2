@@ -63,6 +63,7 @@
             findButton.TabIndex = 2;
             findButton.Text = "Find";
             findButton.UseVisualStyleBackColor = true;
+            findButton.Click += findButton_Click;
             // 
             // courseListBox
             // 
