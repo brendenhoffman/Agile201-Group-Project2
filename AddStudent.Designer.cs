@@ -120,9 +120,9 @@
             // 
             // closeButton
             // 
-            closeButton.Location = new Point(57, 315);
+            closeButton.Location = new Point(164, 296);
             closeButton.Name = "closeButton";
-            closeButton.Size = new Size(75, 23);
+            closeButton.Size = new Size(100, 40);
             closeButton.TabIndex = 9;
             closeButton.Text = "&Close";
             closeButton.UseVisualStyleBackColor = true;

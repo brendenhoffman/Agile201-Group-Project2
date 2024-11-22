@@ -22,6 +22,12 @@ namespace Agile201_Group_Project2
         private void ModifyCourse_Load(object sender, EventArgs e)
         {
             string filePath = "course.txt";
+            LoadCoursesFromFile(filePath);
+            courseIDTextBox.Focus();
+        }
+
+        private void LoadCoursesFromFile(string filePath)
+        {
             if (File.Exists(filePath))
             {
                 using (StreamReader sr = new StreamReader(filePath))
@@ -29,24 +35,37 @@ namespace Agile201_Group_Project2
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        string[] parts = line.Split('|');
-                        if (parts.Length >= 4)
+                        string[] parts = line.Split('|'); // Split the line into parts based on the delimiter
+                        if (parts.Length >= 4) // Ensure there are enough parts for a valid course entry
                         {
                             string courseID = parts[0];
                             string courseName = parts[1];
                             string description = parts[2];
+
+                            // Parse the capacity
                             if (int.TryParse(parts[3], out int capacity))
                             {
                                 Course course = new Course(courseID, courseName, description, capacity);
 
-                                // Add registered students
+                                // Add registered students, filtering out empty entries
                                 for (int i = 4; i < parts.Length; i++)
                                 {
-                                    course.RegisteredStudents.Add(parts[i]);
+                                    if (!string.IsNullOrWhiteSpace(parts[i])) // Exclude blank student entries
+                                    {
+                                        course.RegisteredStudents.Add(parts[i]);
+                                    }
                                 }
 
-                                courses.Add(course);
+                                courses.Add(course); // Add the parsed course to the list
                             }
+                            else
+                            {
+                                MessageBox.Show($"Invalid capacity value for course {courseID}. Skipping this entry.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Invalid course data format. Skipping line: {line}");
                         }
                     }
                 }
@@ -55,7 +74,6 @@ namespace Agile201_Group_Project2
             {
                 MessageBox.Show("Course file not found.");
             }
-            courseIDTextBox.Focus();
         }
 
         private void findButton_Click(object sender, EventArgs e)
