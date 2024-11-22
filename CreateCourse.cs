@@ -36,7 +36,7 @@ namespace Agile201_Group_Project2
             if (courses.Count > 0)
             {
                 string savedCourses = string.Join(Environment.NewLine, courses);
-                MessageBox.Show($"Loaded Courses:\n{savedCourses}", "Loaded Courses");
+                //MessageBox.Show($"Loaded Courses:\n{savedCourses}", "Loaded Courses");
             }
 
         }
