@@ -73,7 +73,7 @@
             newSeatsTextBox.Location = new Point(160, 191);
             newSeatsTextBox.Name = "newSeatsTextBox";
             newSeatsTextBox.Size = new Size(100, 23);
-            newSeatsTextBox.TabIndex = 9;
+            newSeatsTextBox.TabIndex = 7;
             // 
             // registeredTextBox
             // 
@@ -81,7 +81,7 @@
             registeredTextBox.Name = "registeredTextBox";
             registeredTextBox.ReadOnly = true;
             registeredTextBox.Size = new Size(100, 23);
-            registeredTextBox.TabIndex = 8;
+            registeredTextBox.TabIndex = 6;
             // 
             // seatsTextBox
             // 
@@ -89,7 +89,7 @@
             seatsTextBox.Name = "seatsTextBox";
             seatsTextBox.ReadOnly = true;
             seatsTextBox.Size = new Size(100, 23);
-            seatsTextBox.TabIndex = 7;
+            seatsTextBox.TabIndex = 5;
             // 
             // descriptionTextBox
             // 
@@ -97,14 +97,14 @@
             descriptionTextBox.Multiline = true;
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(100, 42);
-            descriptionTextBox.TabIndex = 6;
+            descriptionTextBox.TabIndex = 4;
             // 
             // courseNameTextBox
             // 
             courseNameTextBox.Location = new Point(160, 27);
             courseNameTextBox.Name = "courseNameTextBox";
             courseNameTextBox.Size = new Size(100, 23);
-            courseNameTextBox.TabIndex = 5;
+            courseNameTextBox.TabIndex = 3;
             // 
             // label6
             // 
@@ -165,14 +165,14 @@
             courseIDTextBox.Location = new Point(230, 42);
             courseIDTextBox.Name = "courseIDTextBox";
             courseIDTextBox.Size = new Size(65, 23);
-            courseIDTextBox.TabIndex = 2;
+            courseIDTextBox.TabIndex = 0;
             // 
             // findButton
             // 
             findButton.Location = new Point(323, 41);
             findButton.Name = "findButton";
             findButton.Size = new Size(75, 23);
-            findButton.TabIndex = 3;
+            findButton.TabIndex = 1;
             findButton.Text = "Find";
             findButton.UseVisualStyleBackColor = true;
             findButton.Click += findButton_Click;
@@ -182,7 +182,7 @@
             saveButton.Location = new Point(70, 352);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(75, 40);
-            saveButton.TabIndex = 4;
+            saveButton.TabIndex = 8;
             saveButton.Text = "&Save";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
@@ -192,7 +192,7 @@
             closeButton.Location = new Point(171, 352);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(75, 40);
-            closeButton.TabIndex = 5;
+            closeButton.TabIndex = 9;
             closeButton.Text = "&Close";
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
@@ -202,7 +202,7 @@
             deleteButton.Location = new Point(276, 352);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(75, 40);
-            deleteButton.TabIndex = 6;
+            deleteButton.TabIndex = 11;
             deleteButton.Text = "Delete Course";
             deleteButton.UseVisualStyleBackColor = true;
             deleteButton.Click += deleteButton_Click;
@@ -213,7 +213,7 @@
             enabledCheckBox.Location = new Point(267, 318);
             enabledCheckBox.Name = "enabledCheckBox";
             enabledCheckBox.Size = new Size(104, 19);
-            enabledCheckBox.TabIndex = 7;
+            enabledCheckBox.TabIndex = 10;
             enabledCheckBox.Text = "Delete Enabled";
             enabledCheckBox.UseVisualStyleBackColor = true;
             // 
