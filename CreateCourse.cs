@@ -87,6 +87,7 @@ namespace Agile201_Group_Project2
                 courseNameTextBox.Clear();
                 descriptionTextBox.Clear();
                 seatsTextBox.Clear();
+                courseIDTextBox.Focus();
             }
 
         }

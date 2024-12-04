@@ -105,7 +105,53 @@ namespace Agile201_Group_Project2
 
         private void removeCourseButton_Click(object sender, EventArgs e)
         {
+            string studentID = studentIDTextBox.Text.Trim();
+            if (string.IsNullOrEmpty(studentID))
+            {
+                MessageBox.Show("Please enter a student ID.");
+                return;
+            }
 
+            if (courseListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a course to remove.");
+                return;
+            }
+
+            // Extract course ID from the selected item
+            string selectedCourseInfo = courseListBox.SelectedItem.ToString();
+            string selectedCourseID = selectedCourseInfo.Replace("Course ID: ", "").Trim();
+            // Find the selected course
+            Course course = courses.FirstOrDefault(c => c.CourseID == selectedCourseID);
+            if (course == null)
+            {
+                MessageBox.Show("Selected course not found.");
+                return;
+            }
+
+            // Remove the student from the course
+            if (course.RegisteredStudents.Contains(studentID))
+            {
+                course.RegisteredStudents.Remove(studentID);
+
+                // Save the updated courses back to the file
+                using (StreamWriter sw = new StreamWriter("course.txt"))
+                {
+                    foreach (var c in courses)
+                    {
+                        sw.WriteLine($"{c.CourseID}|{c.CourseName}|{c.CourseDescription}|{c.CourseCapacity}|{string.Join("|", c.RegisteredStudents)}");
+                    }
+                }
+
+                // Refresh the student courses list
+                findButton_Click(null, null);
+
+                MessageBox.Show($"Student {studentID} removed from course {selectedCourseID}.");
+            }
+            else
+            {
+                MessageBox.Show($"Student {studentID} is not registered for course {selectedCourseID}.");
+            }
         }
     }
 }

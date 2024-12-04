@@ -45,7 +45,6 @@
             saveButton = new Button();
             closeButton = new Button();
             deleteButton = new Button();
-            enabledCheckBox = new CheckBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -207,22 +206,11 @@
             deleteButton.UseVisualStyleBackColor = true;
             deleteButton.Click += deleteButton_Click;
             // 
-            // enabledCheckBox
-            // 
-            enabledCheckBox.AutoSize = true;
-            enabledCheckBox.Location = new Point(267, 318);
-            enabledCheckBox.Name = "enabledCheckBox";
-            enabledCheckBox.Size = new Size(104, 19);
-            enabledCheckBox.TabIndex = 10;
-            enabledCheckBox.Text = "Delete Enabled";
-            enabledCheckBox.UseVisualStyleBackColor = true;
-            // 
             // ModifyCourse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(435, 422);
-            Controls.Add(enabledCheckBox);
             Controls.Add(deleteButton);
             Controls.Add(closeButton);
             Controls.Add(saveButton);
@@ -258,6 +246,5 @@
         private Button saveButton;
         private Button closeButton;
         private Button deleteButton;
-        private CheckBox enabledCheckBox;
     }
 }
