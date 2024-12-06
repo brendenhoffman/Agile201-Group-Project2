@@ -170,7 +170,58 @@ namespace Agile201_Group_Project2
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            string courseID = courseIDTextBox.Text.Trim();
 
+            if (string.IsNullOrEmpty(courseID))
+            {
+                MessageBox.Show("Please enter a Course ID.");
+                return;
+            }
+
+            var course = courses.FirstOrDefault(c => string.Equals(c.CourseID, courseID, StringComparison.OrdinalIgnoreCase));
+
+            if (course == null)
+            {
+                MessageBox.Show("Course not found.");
+                return;
+            }
+
+            // Check if the course is empty
+            if (!course.IsEmpty())
+            {
+                MessageBox.Show("This course has registered students and cannot be deleted.");
+                return;
+            }
+
+            // Confirm deletion
+            var confirmResult = MessageBox.Show(
+                $"Are you sure you want to delete the course '{course.CourseName}'?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                // Remove the course from the list
+                courses.Remove(course);
+
+                // Save changes to the file
+                SaveCoursesToFile();
+
+                // Clear the form fields
+                ClearCourseDetails();
+
+                MessageBox.Show("Course deleted successfully.");
+            }
+        }
+
+        private void ClearCourseDetails()
+        {
+            courseIDTextBox.Clear();
+            courseNameTextBox.Clear();
+            descriptionTextBox.Clear();
+            seatsTextBox.Clear();
+            registeredTextBox.Clear();
+            newSeatsTextBox.Clear();
         }
     }
 }

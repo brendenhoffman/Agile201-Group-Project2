@@ -95,7 +95,12 @@ namespace Agile201_Group_Project2
 
         private void printButton_Click(object sender, EventArgs e)
         {
-
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument1;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print(); // Start the printing process
+            }
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -152,6 +157,73 @@ namespace Agile201_Group_Project2
             {
                 MessageBox.Show($"Student {studentID} is not registered for course {selectedCourseID}.");
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string studentID = studentIDTextBox.Text.Trim(); // Get student ID from the TextBox
+            if (string.IsNullOrEmpty(studentID))
+            {
+                MessageBox.Show("Please enter a student ID.");
+                return;
+            }
+
+            // Find the student's courses
+            var matchingCourses = courses
+                .Where(c => c.RegisteredStudents.Contains(studentID))
+                .ToList();
+
+            if (!matchingCourses.Any())
+            {
+                MessageBox.Show("No courses found for this student.");
+                return;
+            }
+
+            // Set up font and layout for printing
+            Font printFont = new Font("Arial", 12);
+            Brush printBrush = Brushes.Black;
+
+            // Set the starting position for printing
+            float yPosition = 20;
+            float xPosition = 20;
+            float lineHeight = printFont.GetHeight();
+
+            string title = "Student Registration Report";
+            Font titleFont = new Font("Times New Roman", 20, FontStyle.Bold);
+            float titleWidth = e.Graphics.MeasureString(title, titleFont).Width;
+            xPosition = (e.PageBounds.Width - titleWidth) / 2;
+            e.Graphics.DrawString(title, titleFont, printBrush, xPosition, yPosition);
+            yPosition += titleFont.GetHeight() + 10;
+            xPosition = 20;
+            // Print header
+            e.Graphics.DrawString($"Registration Record for Student ID: {studentID}", printFont, printBrush, xPosition, yPosition);
+            yPosition += lineHeight + 10; // spacing
+
+            // Loop through each course and print the details
+            foreach (var course in matchingCourses)
+            {
+                e.Graphics.DrawString($"Course ID: {course.CourseID}", printFont, printBrush, xPosition, yPosition);
+                yPosition += lineHeight;
+
+                e.Graphics.DrawString($"Course Name: {course.CourseName}", printFont, printBrush, xPosition, yPosition);
+                yPosition += lineHeight;
+
+                e.Graphics.DrawString($"Description: {course.CourseDescription}", printFont, printBrush, xPosition, yPosition);
+                yPosition += lineHeight;
+
+                e.Graphics.DrawString($"Capacity: {course.RegisteredStudents.Count}/{course.CourseCapacity}", printFont, printBrush, xPosition, yPosition);
+                yPosition += lineHeight + 10; // Extra space after each course
+
+                // If there are too many courses
+                if (yPosition > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true;
+                    return;
+                }
+            }
+
+            // If all courses fit on the page, no extra pages
+            e.HasMorePages = false;
         }
     }
 }

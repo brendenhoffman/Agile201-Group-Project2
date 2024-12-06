@@ -33,9 +33,7 @@
             findButton = new Button();
             courseListBox = new ListBox();
             closeButton = new Button();
-            purgeButton = new Button();
             printButton = new Button();
-            enabledCheckBox = new CheckBox();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             SuspendLayout();
             // 
@@ -85,16 +83,6 @@
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
-            // purgeButton
-            // 
-            purgeButton.Location = new Point(471, 386);
-            purgeButton.Name = "purgeButton";
-            purgeButton.Size = new Size(98, 39);
-            purgeButton.TabIndex = 5;
-            purgeButton.Text = "Purge Student Registration";
-            purgeButton.UseVisualStyleBackColor = true;
-            purgeButton.Click += purgeButton_Click;
-            // 
             // printButton
             // 
             printButton.Location = new Point(60, 386);
@@ -105,24 +93,12 @@
             printButton.UseVisualStyleBackColor = true;
             printButton.Click += printButton_Click;
             // 
-            // enabledCheckBox
-            // 
-            enabledCheckBox.AutoSize = true;
-            enabledCheckBox.Location = new Point(467, 362);
-            enabledCheckBox.Name = "enabledCheckBox";
-            enabledCheckBox.Size = new Size(102, 19);
-            enabledCheckBox.TabIndex = 7;
-            enabledCheckBox.Text = "Purge Enabled";
-            enabledCheckBox.UseVisualStyleBackColor = true;
-            // 
             // ViewCourse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(628, 450);
-            Controls.Add(enabledCheckBox);
             Controls.Add(printButton);
-            Controls.Add(purgeButton);
             Controls.Add(closeButton);
             Controls.Add(courseListBox);
             Controls.Add(findButton);
@@ -142,9 +118,7 @@
         private Button findButton;
         private ListBox courseListBox;
         private Button closeButton;
-        private Button purgeButton;
         private Button printButton;
-        private CheckBox enabledCheckBox;
         private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
